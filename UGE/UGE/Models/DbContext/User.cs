@@ -34,6 +34,10 @@ namespace UGE.Models.DbContext
         [StringLength(50)]
         public string LastName { get; set; }
 
+        [Required]
+        [StringLength(128)]
+        public string AccountID { get; set; }
+
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         [Required]
         [StringLength(101)]
