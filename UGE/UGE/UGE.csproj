@@ -234,6 +234,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-account.mdf" />
+    <Content Include="App_Data\aspnet-account_log.ldf">
+      <DependentUpon>aspnet-account.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\UGE.mdf" />
     <Content Include="App_Data\UGE_log.ldf">
       <DependentUpon>UGE.mdf</DependentUpon>
