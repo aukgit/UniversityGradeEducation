@@ -205,11 +205,28 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\SubjectController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DbContext\Article.cs" />
+    <Compile Include="Models\DbContext\ArticleMistake.cs" />
+    <Compile Include="Models\DbContext\Book.cs" />
+    <Compile Include="Models\DbContext\Bookmark.cs" />
+    <Compile Include="Models\DbContext\Chapter.cs" />
+    <Compile Include="Models\DbContext\Choice.cs" />
+    <Compile Include="Models\DbContext\LinksToDisplay.cs" />
+    <Compile Include="Models\DbContext\MCQ.cs" />
+    <Compile Include="Models\DbContext\Question.cs" />
+    <Compile Include="Models\DbContext\ReplyAgainstMistake.cs" />
+    <Compile Include="Models\DbContext\Subject.cs" />
+    <Compile Include="Models\DbContext\sysdiagram.cs" />
+    <Compile Include="Models\DbContext\UGEModel.cs" />
+    <Compile Include="Models\DbContext\User.cs" />
+    <Compile Include="Models\DbContext\WatchedReference.cs" />
+    <Compile Include="Models\DbContext\WishList.cs" />
     <Compile Include="Models\Intact\AccountViewModels.cs" />
     <Compile Include="Models\Intact\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -235,6 +252,12 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Subject\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Subject\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Subject\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Subject\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Subject\Index.cshtml" />
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -288,9 +311,7 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Models\DbContext\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
