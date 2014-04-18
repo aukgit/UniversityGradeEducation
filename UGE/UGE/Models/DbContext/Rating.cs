@@ -6,14 +6,22 @@ namespace UGE.Models.DbContext
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Bookmark")]
-    public partial class Bookmark
+    [Table("Rating")]
+    public partial class Rating
     {
-        public long BookmarkID { get; set; }
+        public long RatingID { get; set; }
+
+        public long ArticleID { get; set; }
 
         public int UserID { get; set; }
 
-        public long ArticleID { get; set; }
+        public byte VideoQualtiy { get; set; }
+
+        public byte TechingTechnique { get; set; }
+
+        public byte Mateials { get; set; }
+
+        public double AvgRating { get; set; }
 
         public virtual Article Article { get; set; }
 

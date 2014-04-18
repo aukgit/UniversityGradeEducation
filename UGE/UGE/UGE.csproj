@@ -220,9 +220,9 @@
     <Compile Include="Models\DbContext\LinksToDisplay.cs" />
     <Compile Include="Models\DbContext\MCQ.cs" />
     <Compile Include="Models\DbContext\Question.cs" />
+    <Compile Include="Models\DbContext\Rating.cs" />
     <Compile Include="Models\DbContext\ReplyAgainstMistake.cs" />
     <Compile Include="Models\DbContext\Subject.cs" />
-    <Compile Include="Models\DbContext\sysdiagram.cs" />
     <Compile Include="Models\DbContext\UGEModel.cs" />
     <Compile Include="Models\DbContext\User.cs" />
     <Compile Include="Models\DbContext\WatchedReference.cs" />

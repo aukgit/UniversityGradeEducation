@@ -9,7 +9,6 @@ namespace UGE.Models.DbContext
     [Table("WishList")]
     public partial class WishList
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long WishListID { get; set; }
 
         public int UserID { get; set; }

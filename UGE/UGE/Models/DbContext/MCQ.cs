@@ -14,7 +14,6 @@ namespace UGE.Models.DbContext
             Questions = new HashSet<Question>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MCQID { get; set; }
 
         public short Duration { get; set; }

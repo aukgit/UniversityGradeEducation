@@ -14,7 +14,6 @@ namespace UGE.Models.DbContext
             ReplyAgainstMistake1 = new HashSet<ReplyAgainstMistake>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long ReplyAgainstMistakeID { get; set; }
 
         public long ArticleMistakeID { get; set; }

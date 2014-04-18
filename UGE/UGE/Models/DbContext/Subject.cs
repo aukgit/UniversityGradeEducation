@@ -14,6 +14,7 @@ namespace UGE.Models.DbContext
             Books = new HashSet<Book>();
         }
 
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public byte SubjectID { get; set; }
 
         [Required]

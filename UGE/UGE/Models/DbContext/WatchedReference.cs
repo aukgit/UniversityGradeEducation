@@ -9,7 +9,6 @@ namespace UGE.Models.DbContext
     [Table("WatchedReference")]
     public partial class WatchedReference
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long WatchedReferenceID { get; set; }
 
         public long WhichFromArticleID { get; set; }

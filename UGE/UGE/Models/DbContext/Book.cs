@@ -14,7 +14,6 @@ namespace UGE.Models.DbContext
             Chapters = new HashSet<Chapter>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int BookID { get; set; }
 
         public byte SubjectID { get; set; }

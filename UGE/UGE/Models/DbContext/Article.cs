@@ -16,12 +16,12 @@ namespace UGE.Models.DbContext
             Bookmarks = new HashSet<Bookmark>();
             LinksToDisplays = new HashSet<LinksToDisplay>();
             MCQs = new HashSet<MCQ>();
+            Ratings = new HashSet<Rating>();
             WatchedReferences = new HashSet<WatchedReference>();
             WatchedReferences1 = new HashSet<WatchedReference>();
             WishLists = new HashSet<WishList>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long ArticleID { get; set; }
 
         [Required]
@@ -46,6 +46,8 @@ namespace UGE.Models.DbContext
 
         public short Width { get; set; }
 
+        public double AvgRating { get; set; }
+
         public virtual ICollection<Article> Article1 { get; set; }
 
         public virtual Article Article2 { get; set; }
@@ -61,6 +63,8 @@ namespace UGE.Models.DbContext
         public virtual ICollection<LinksToDisplay> LinksToDisplays { get; set; }
 
         public virtual ICollection<MCQ> MCQs { get; set; }
+
+        public virtual ICollection<Rating> Ratings { get; set; }
 
         public virtual ICollection<WatchedReference> WatchedReferences { get; set; }
 

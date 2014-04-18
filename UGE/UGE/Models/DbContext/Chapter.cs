@@ -15,7 +15,6 @@ namespace UGE.Models.DbContext
             LinksToDisplays = new HashSet<LinksToDisplay>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ChapterID { get; set; }
 
         public int BookID { get; set; }

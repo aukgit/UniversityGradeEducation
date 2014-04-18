@@ -6,7 +6,7 @@ namespace UGE.Models.DbContext {
 
     public partial class UGEModel : DbContext {
         public UGEModel()
-            : base("name=UGEContext") {
+            : base("name=UGEModel") {
         }
 
         public virtual DbSet<Article> Articles { get; set; }
@@ -18,9 +18,9 @@ namespace UGE.Models.DbContext {
         public virtual DbSet<LinksToDisplay> LinksToDisplays { get; set; }
         public virtual DbSet<MCQ> MCQs { get; set; }
         public virtual DbSet<Question> Questions { get; set; }
+        public virtual DbSet<Rating> Ratings { get; set; }
         public virtual DbSet<ReplyAgainstMistake> ReplyAgainstMistakes { get; set; }
         public virtual DbSet<Subject> Subjects { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<WatchedReference> WatchedReferences { get; set; }
         public virtual DbSet<WishList> WishLists { get; set; }
@@ -60,6 +60,11 @@ namespace UGE.Models.DbContext {
 
             modelBuilder.Entity<Article>()
                 .HasMany(e => e.MCQs)
+                .WithRequired(e => e.Article)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Article>()
+                .HasMany(e => e.Ratings)
                 .WithRequired(e => e.Article)
                 .WillCascadeOnDelete(false);
 
@@ -181,6 +186,11 @@ namespace UGE.Models.DbContext {
 
             modelBuilder.Entity<User>()
                 .HasMany(e => e.Bookmarks)
+                .WithRequired(e => e.User)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.Ratings)
                 .WithRequired(e => e.User)
                 .WillCascadeOnDelete(false);
 

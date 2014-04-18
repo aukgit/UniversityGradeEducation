@@ -9,7 +9,6 @@ namespace UGE.Models.DbContext
     [Table("LinksToDisplay")]
     public partial class LinksToDisplay
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long LinksToDisplayID { get; set; }
 
         public long ArticleID { get; set; }

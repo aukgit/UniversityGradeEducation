@@ -14,7 +14,6 @@ namespace UGE.Models.DbContext
             Choices = new HashSet<Choice>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long QuestionID { get; set; }
 
         [StringLength(200)]

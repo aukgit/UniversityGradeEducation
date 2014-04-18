@@ -12,10 +12,10 @@ namespace UGE.Models.DbContext
         public User()
         {
             Bookmarks = new HashSet<Bookmark>();
+            Ratings = new HashSet<Rating>();
             WishLists = new HashSet<WishList>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int UserID { get; set; }
 
         [Required]
@@ -40,6 +40,8 @@ namespace UGE.Models.DbContext
         public string DisplayName { get; set; }
 
         public virtual ICollection<Bookmark> Bookmarks { get; set; }
+
+        public virtual ICollection<Rating> Ratings { get; set; }
 
         public virtual ICollection<WishList> WishLists { get; set; }
     }
