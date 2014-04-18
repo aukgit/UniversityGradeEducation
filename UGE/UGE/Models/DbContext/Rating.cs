@@ -19,7 +19,7 @@ namespace UGE.Models.DbContext
 
         public byte TechingTechnique { get; set; }
 
-        public byte Mateials { get; set; }
+        public byte Materials { get; set; }
 
         public double AvgRating { get; set; }
 
