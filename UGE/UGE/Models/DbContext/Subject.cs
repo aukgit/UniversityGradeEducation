@@ -2,6 +2,7 @@ namespace UGE.Models.DbContext
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
@@ -16,7 +17,7 @@ namespace UGE.Models.DbContext
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public byte SubjectID { get; set; }
-
+        [DisplayName("Subject")]
         [Required]
         [StringLength(50)]
         public string SubjectName { get; set; }

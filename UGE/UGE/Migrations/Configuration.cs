@@ -9,7 +9,7 @@ namespace UGE.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(UGE.Models.DbContext.UGEContext context)
