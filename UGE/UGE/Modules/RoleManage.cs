@@ -41,7 +41,7 @@ namespace Modules {
             UserRole role = db.UserRoles.Find(roleName);
             string[] roles = null;
             if (role != null) {
-                roles = db.UserRoles.Where(n => n.RolePriority <= role.RolePriority)
+                roles = db.UserRoles //.Where(n => n.RolePriority <= role.RolePriority)
                           .Select(n => n.RoleName)
                           .ToArray();
             }

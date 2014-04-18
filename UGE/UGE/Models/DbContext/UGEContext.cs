@@ -8,13 +8,10 @@ namespace UGE.Models.DbContext {
         public UGEContext()
             : base("name=UGEContext") {
         }
-
         public virtual DbSet<Article> Articles { get; set; }
         public virtual DbSet<ArticleMistake> ArticleMistakes { get; set; }
         public virtual DbSet<Book> Books { get; set; }
-        public virtual DbSet<Bookmark> Bookmarks { get; set; }
-        public virtual DbSet<Chapter> Chapters { get; set; }
-        public virtual DbSet<Choice> Choices { get; set; }
+
         public virtual DbSet<LinksToDisplay> LinksToDisplays { get; set; }
         public virtual DbSet<MCQ> MCQs { get; set; }
         public virtual DbSet<Question> Questions { get; set; }
@@ -23,7 +20,6 @@ namespace UGE.Models.DbContext {
         public virtual DbSet<Subject> Subjects { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UserRole> UserRoles { get; set; }
-
         public virtual DbSet<WatchedReference> WatchedReferences { get; set; }
         public virtual DbSet<WishList> WishLists { get; set; }
 
@@ -197,14 +193,15 @@ namespace UGE.Models.DbContext {
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<User>()
+                .HasMany(e => e.UserRoles)
+                .WithRequired(e => e.User)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<User>()
                 .HasMany(e => e.WishLists)
                 .WithRequired(e => e.User)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<UserRole>()
-               .HasMany(e => e.Users);
-
-          
             modelBuilder.Entity<UserRole>()
                 .Property(e => e.RoleName)
                 .IsUnicode(false);

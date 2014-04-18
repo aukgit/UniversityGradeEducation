@@ -15,6 +15,8 @@ namespace UGE.Models.DbContext
             Bookmarks = new HashSet<Bookmark>();
             Ratings = new HashSet<Rating>();
             WishLists = new HashSet<WishList>();
+            UserRoles = new HashSet<UserRole>();
+
         }
 
         public int UserID { get; set; }
@@ -50,5 +52,8 @@ namespace UGE.Models.DbContext
         public virtual ICollection<Rating> Ratings { get; set; }
 
         public virtual ICollection<WishList> WishLists { get; set; }
+
+        public virtual ICollection<UserRole> UserRoles { get; set; }
+
     }
 }

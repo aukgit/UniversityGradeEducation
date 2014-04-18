@@ -10,6 +10,7 @@ namespace UGE.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(UGE.Models.DbContext.UGEContext context)

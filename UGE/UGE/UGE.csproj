@@ -212,9 +212,9 @@
     </Compile>
     <Compile Include="Helpers\HtmlHelperDynamic.cs" />
     <Compile Include="Helpers\HtmlHelpers.cs" />
-    <Compile Include="Migrations\201404181941390_InitialMigrations.cs" />
-    <Compile Include="Migrations\201404181941390_InitialMigrations.Designer.cs">
-      <DependentUpon>201404181941390_InitialMigrations.cs</DependentUpon>
+    <Compile Include="Migrations\201404181957017_InitialMigrations.cs" />
+    <Compile Include="Migrations\201404181957017_InitialMigrations.Designer.cs">
+      <DependentUpon>201404181957017_InitialMigrations.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DbContext\Article.cs" />
@@ -230,8 +230,10 @@
     <Compile Include="Models\DbContext\ReplyAgainstMistake.cs" />
     <Compile Include="Models\DbContext\Subject.cs" />
     <Compile Include="Models\DbContext\UGEContext.cs" />
-    <Compile Include="Models\DbContext\UserRole.cs" />
     <Compile Include="Models\DbContext\User.cs" />
+    <Compile Include="Models\DbContext\UserRole.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Models\DbContext\WatchedReference.cs" />
     <Compile Include="Models\DbContext\WishList.cs" />
     <Compile Include="Models\Intact\AccountViewModels.cs" />
@@ -345,8 +347,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201404181941390_InitialMigrations.resx">
-      <DependentUpon>201404181941390_InitialMigrations.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201404181957017_InitialMigrations.resx">
+      <DependentUpon>201404181957017_InitialMigrations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
