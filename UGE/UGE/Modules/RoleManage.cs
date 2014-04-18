@@ -42,7 +42,7 @@ namespace Modules {
             string[] roles = null;
             if (role != null) {
                 roles = db.UserRoles.Where(n => n.RolePriority <= role.RolePriority)
-                          .Select(n => n.UserRoleID)
+                          .Select(n => n.RoleName)
                           .ToArray();
             }
             return roles;

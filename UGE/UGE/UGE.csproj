@@ -212,6 +212,10 @@
     </Compile>
     <Compile Include="Helpers\HtmlHelperDynamic.cs" />
     <Compile Include="Helpers\HtmlHelpers.cs" />
+    <Compile Include="Migrations\201404181941390_InitialMigrations.cs" />
+    <Compile Include="Migrations\201404181941390_InitialMigrations.Designer.cs">
+      <DependentUpon>201404181941390_InitialMigrations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DbContext\Article.cs" />
     <Compile Include="Models\DbContext\ArticleMistake.cs" />
@@ -339,6 +343,11 @@
       <Project>{9302c6e3-fbe2-4a99-9be3-81e80724cec6}</Project>
       <Name>DevMVCComponent</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201404181941390_InitialMigrations.resx">
+      <DependentUpon>201404181941390_InitialMigrations.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

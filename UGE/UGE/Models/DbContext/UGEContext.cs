@@ -22,6 +22,8 @@ namespace UGE.Models.DbContext {
         public virtual DbSet<ReplyAgainstMistake> ReplyAgainstMistakes { get; set; }
         public virtual DbSet<Subject> Subjects { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<UserRole> UserRoles { get; set; }
+
         public virtual DbSet<WatchedReference> WatchedReferences { get; set; }
         public virtual DbSet<WishList> WishLists { get; set; }
 
@@ -198,6 +200,14 @@ namespace UGE.Models.DbContext {
                 .HasMany(e => e.WishLists)
                 .WithRequired(e => e.User)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<UserRole>()
+               .HasMany(e => e.Users);
+
+          
+            modelBuilder.Entity<UserRole>()
+                .Property(e => e.RoleName)
+                .IsUnicode(false);
         }
     }
 }
