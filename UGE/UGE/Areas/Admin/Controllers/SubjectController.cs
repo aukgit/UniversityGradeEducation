@@ -12,7 +12,7 @@ namespace UGE.Areas.Admin.Controllers
 {
     public class SubjectController : Controller
     {
-        private UGEModel db = new UGEModel();
+        private UGEContext db = new UGEContext();
 
         // GET: /Admin/Subject/
         public ActionResult Index()

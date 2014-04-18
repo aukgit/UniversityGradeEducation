@@ -4,9 +4,9 @@ namespace UGE.Models.DbContext {
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class UGEModel : DbContext {
-        public UGEModel()
-            : base("name=UGEModel") {
+    public partial class UGEContext : DbContext {
+        public UGEContext()
+            : base("name=UGEContext") {
         }
 
         public virtual DbSet<Article> Articles { get; set; }
